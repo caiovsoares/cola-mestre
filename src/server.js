@@ -1,13 +1,17 @@
-const { Server } = require("socket.io");
+import { Server } from 'socket.io';
+import clipboard from 'clipboardy';
+
+const copy = clipboard.writeSync;
 
 const io = new Server({ /* options */ });
 
 io.on("connection", (socket) => {
-  console.log("socket")
-  socket.on("pipi", (arg, callback) => {
-    console.log("recebido!")
+
+  socket.on("ping", (arg, callback) => {
+    copy(arg)
     callback("reCba!")
-})
+  })
+  
 });
 
 io.listen(3000);

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "indexcliente.js",
+  "type": "module",
   "scripts": {
-    "server":"node src/server.js",
-    "client":"node src/client.js",
+    "server": "node src/server.js",
+    "client": "node src/client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +21,8 @@
   },
   "homepage": "https://github.com/caiovsoares/cola-mestre#readme",
   "dependencies": {
-    "node-global-key-listener": "0.0.13",
+    "clipboardy": "^3.0.0",
+    "node-global-key-listener": "^0.0.13",
     "socket.io": "^4.4.1",
     "socket.io-client": "^4.4.1"
   }

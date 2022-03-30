@@ -1,15 +1,16 @@
-const { io } = require("socket.io-client");
-const {GlobalKeyboardListener} = require("node-global-key-listener")
+import { io } from 'socket.io-client'
+import {GlobalKeyboardListener} from "node-global-key-listener"
 
 const socket = io("ws://localhost:3000");
 const listener = new GlobalKeyboardListener();
 
 listener.addListener(function (e, down) {
+    if(e.state == "DOWN")
+    console.log(e.name)
+    // if(e.name === "SPACE")
+    //     socket.emit("ping","Mensagem Personalizada", (resposta) => {
+    //         console.log(resposta)
+    //     })
 
-    if(e.name === "F1")
-        console.log("foi um F1 nego")
-    if(e.name === "SPACE")
-        socket.emit("pipi","Sera?", (resposta) => {
-            console.log(resposta)
-        })
+
 });
