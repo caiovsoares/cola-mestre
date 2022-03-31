@@ -1,10 +1,11 @@
 import { io } from 'socket.io-client'
 import {GlobalKeyboardListener} from "node-global-key-listener"
 import clipboard from 'clipboardy'
+import 'dotenv/config'
 const copy = clipboard.writeSync;
 const paste = clipboard.readSync;
 
-const socket = io("ws://localhost:3000");
+const socket = io(`ws://${process.env.HOST_ADDRESS}:3000`);
 const listener = new GlobalKeyboardListener();
 
 const keys = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
