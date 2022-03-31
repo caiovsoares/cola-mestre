@@ -22,7 +22,7 @@
   "homepage": "https://github.com/caiovsoares/cola-mestre#readme",
   "dependencies": {
     "clipboardy": "^3.0.0",
-    "dotenv": "^16.0.0",
+    "config": "^3.3.7",
     "node-global-key-listener": "^0.0.13",
     "socket.io": "^4.4.1",
     "socket.io-client": "^4.4.1"
